@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  background-color: green;
+}
+#gameBoard {
+  background-color: red;
+  margin: 15%;
+  padding: 7% 0%;
+}
