@@ -13,25 +13,29 @@ document.getElementById("money").innerHTML = "Money: " + money;
 function deal() {
   //Asks user how much they want to bet
   var bet = parseInt(prompt("Please enter a bet for the round: "));
-  gamble = bet;
-  //Deals player the first card//
-  var ranCard1 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
-  dealt.push(ranCard1);
-  document.getElementById("yourCards").innerHTML = dealt;
-  document.getElementById("dealBtn").onclick = "";
+  if (bet <= money) {
+    gamble = bet;
+    //Deals player the first card//
+    var ranCard1 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
+    dealt.push(ranCard1);
+    document.getElementById("yourCards").innerHTML = dealt;
+    document.getElementById("dealBtn").onclick = "";
 
-  //Initializes a dealer score to compete against the player//
-  var dealerCard1 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
-  var dealerCard2 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
-  dealerScore = dealerCard1 + dealerCard2;
+    //Initializes a dealer score to compete against the player//
+    var dealerCard1 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
+    var dealerCard2 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
+    dealerScore = dealerCard1 + dealerCard2;
 
-  if (dealerScore <= 5) {
-    var dealerCard3 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
-    dealerScore += dealerCard3;
-  }
-  if (dealerScore <= 10) {
-    var dealerCard4 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
-    dealerScore += dealerCard4;
+    if (dealerScore <= 5) {
+      var dealerCard3 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
+      dealerScore += dealerCard3;
+    }
+    if (dealerScore <= 10) {
+      var dealerCard4 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
+      dealerScore += dealerCard4;
+    }
+  } else {
+    alert("Please enter a valid bet.");
   }
 }
 
@@ -118,9 +122,3 @@ function reset() {
   dealerCard4 = "";
   monCheck();
 }
-
-
-
-
-
-
