@@ -278,9 +278,3 @@ function reset() {
   dealerCard4 = "";
   monCheck();
 }
-
-//places card img in slot after deal
-
-
-
-
