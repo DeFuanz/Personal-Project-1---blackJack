@@ -8,6 +8,7 @@ var ties = 0;
 var money = 1000;
 var gamble;
 document.getElementById("money").innerHTML = "Money: " + money;
+document.getElementById("hitBtn").onclick = "";
 var oneCard = dealt[0];
 var twoCard = dealt[1];
 var threeCard = dealt[2];
@@ -25,6 +26,7 @@ function deal() {
     dealt.push(ranCard1);
     document.getElementById("yourCards").innerHTML = dealt;
     document.getElementById("dealBtn").onclick = "";
+    document.getElementById("hitBtn").onclick = hit;
 
     //places card images on deal
     if (dealt[0] == 1) {
@@ -66,11 +68,13 @@ function deal() {
     }
   } else {
     alert("Please enter a valid bet.");
+    document.getElementById("hitBtn").onclick = "";
   }
 }
 
 //creates random cards on hit and tests to see if score is over 21//
 function hit() {
+  document.getElementById("stayBtn").onclick = stay;
   var ranCard2 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
   dealt.push(ranCard2);
   //places card images when dealt
@@ -260,8 +264,8 @@ function reset() {
   document.getElementById("yourCards").innerHTML = "";
   document.getElementById("totals").innerHTML = "";
   document.getElementById("dealBtn").onclick = deal;
-  document.getElementById("hitBtn").onclick = hit;
-  document.getElementById("stayBtn").onclick = stay;
+  document.getElementById("hitBtn").onclick = "";
+  document.getElementById("stayBtn").onclick = "";
   document.getElementById("card1").src = "";
   document.getElementById("card2").src = "";
   document.getElementById("card3").src = "";
