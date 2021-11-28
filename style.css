@@ -4,6 +4,39 @@ body {
 }
 #gameBoard {
   background-color: red;
-  margin: 15%;
+  margin: 7%;
   padding: 7% 0%;
 }
+
+#cardShown {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#card1 {
+  width: 50%;
+}
+
+#card2 {
+  width: 50%;
+}
+
+#card3 {
+  width: 50%;
+}
+
+#card4 {
+  width: 50%;
+}
+
+#card5 {
+  width: 50%;
+}
+
+#card6 {
+  width: 50%;
+}
+
+
+
