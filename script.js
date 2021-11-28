@@ -8,6 +8,12 @@ var ties = 0;
 var money = 1000;
 var gamble;
 document.getElementById("money").innerHTML = "Money: " + money;
+document.getElementById("hitBtn").onclick = "";
+var oneCard = dealt[0];
+var twoCard = dealt[1];
+var threeCard = dealt[2];
+var fourCard = dealt[3];
+var fiveCard = dealt[4];
 
 //starts the round for the player
 function deal() {
@@ -20,6 +26,32 @@ function deal() {
     dealt.push(ranCard1);
     document.getElementById("yourCards").innerHTML = dealt;
     document.getElementById("dealBtn").onclick = "";
+    document.getElementById("hitBtn").onclick = hit;
+
+    //places card images on deal
+    if (dealt[0] == 1) {
+      document.getElementById("card1").src = "images/ace.png";
+    } else if (dealt[0] == 2) {
+      document.getElementById("card1").src = "images/2.png";
+    } else if (dealt[0] == 3) {
+      document.getElementById("card1").src = "images/3.png";
+    } else if (dealt[0] == 4) {
+      document.getElementById("card1").src = "images/4.png";
+    } else if (dealt[0] == 5) {
+      document.getElementById("card1").src = "images/5.png";
+    } else if (dealt[0] == 6) {
+      document.getElementById("card1").src = "images/6.png";
+    } else if (dealt[0] == 7) {
+      document.getElementById("card1").src = "images/7.png";
+    } else if (dealt[0] == 8) {
+      document.getElementById("card1").src = "images/8.png";
+    } else if (dealt[0] == 9) {
+      document.getElementById("card1").src = "images/9.png";
+    } else if (dealt[0] == 10) {
+      document.getElementById("card1").src = "images/10.png";
+    } else if (dealt[0] == 11) {
+      document.getElementById("card1").src = "images/ace.png";
+    }
 
     //Initializes a dealer score to compete against the player//
     var dealerCard1 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
@@ -36,13 +68,131 @@ function deal() {
     }
   } else {
     alert("Please enter a valid bet.");
+    document.getElementById("hitBtn").onclick = "";
   }
 }
 
 //creates random cards on hit and tests to see if score is over 21//
 function hit() {
+  document.getElementById("stayBtn").onclick = stay;
   var ranCard2 = parseInt(cards[Math.floor(Math.random() * cards.length)]);
   dealt.push(ranCard2);
+  //places card images when dealt
+  if (dealt[1] == 1) {
+    document.getElementById("card2").src = "images/ace.png";
+  } else if (dealt[1] == 2) {
+    document.getElementById("card2").src = "images/2.png";
+  } else if (dealt[1] == 3) {
+    document.getElementById("card2").src = "images/3.png";
+  } else if (dealt[1] == 4) {
+    document.getElementById("card2").src = "images/4.png";
+  } else if (dealt[1] == 5) {
+    document.getElementById("card2").src = "images/5.png";
+  } else if (dealt[1] == 6) {
+    document.getElementById("card2").src = "images/6.png";
+  } else if (dealt[1] == 7) {
+    document.getElementById("card2").src = "images/7.png";
+  } else if (dealt[1] == 8) {
+    document.getElementById("card2").src = "images/8.png";
+  } else if (dealt[1] == 9) {
+    document.getElementById("card2").src = "images/9.png";
+  } else if (dealt[1] == 10) {
+    document.getElementById("card2").src = "images/10.png";
+  } else if (dealt[1] == 11) {
+    document.getElementById("card2").src = "images/ace.png";
+  }
+  if (dealt[2] == 1) {
+    document.getElementById("card3").src = "images/ace.png";
+  } else if (dealt[2] == 2) {
+    document.getElementById("card3").src = "images/2.png";
+  } else if (dealt[2] == 3) {
+    document.getElementById("card3").src = "images/3.png";
+  } else if (dealt[2] == 4) {
+    document.getElementById("card3").src = "images/4.png";
+  } else if (dealt[2] == 5) {
+    document.getElementById("card3").src = "images/5.png";
+  } else if (dealt[2] == 6) {
+    document.getElementById("card3").src = "images/6.png";
+  } else if (dealt[2] == 7) {
+    document.getElementById("card3").src = "images/7.png";
+  } else if (dealt[2] == 8) {
+    document.getElementById("card3").src = "images/8.png";
+  } else if (dealt[2] == 9) {
+    document.getElementById("card3").src = "images/9.png";
+  } else if (dealt[2] == 10) {
+    document.getElementById("card3").src = "images/10.png";
+  } else if (dealt[2] == 11) {
+    document.getElementById("card3").src = "images/ace.png";
+  }
+  if (dealt[3] == 1) {
+    document.getElementById("card4").src = "images/ace.png";
+  } else if (dealt[3] == 2) {
+    document.getElementById("card4").src = "images/2.png";
+  } else if (dealt[3] == 3) {
+    document.getElementById("card4").src = "images/3.png";
+  } else if (dealt[3] == 4) {
+    document.getElementById("card4").src = "images/4.png";
+  } else if (dealt[3] == 5) {
+    document.getElementById("card4").src = "images/5.png";
+  } else if (dealt[3] == 6) {
+    document.getElementById("card4").src = "images/6.png";
+  } else if (dealt[3] == 7) {
+    document.getElementById("card4").src = "images/7.png";
+  } else if (dealt[3] == 8) {
+    document.getElementById("card4").src = "images/8.png";
+  } else if (dealt[3] == 9) {
+    document.getElementById("card4").src = "images/9.png";
+  } else if (dealt[3] == 10) {
+    document.getElementById("card4").src = "images/10.png";
+  } else if (dealt[3] == 11) {
+    document.getElementById("card4").src = "images/ace.png";
+  }
+  if (dealt[4] == 1) {
+    document.getElementById("card5").src = "images/ace.png";
+  } else if (dealt[4] == 2) {
+    document.getElementById("card5").src = "images/2.png";
+  } else if (dealt[4] == 3) {
+    document.getElementById("card5").src = "images/3.png";
+  } else if (dealt[4] == 4) {
+    document.getElementById("card5").src = "images/4.png";
+  } else if (dealt[4] == 5) {
+    document.getElementById("card5").src = "images/5.png";
+  } else if (dealt[4] == 6) {
+    document.getElementById("card5").src = "images/6.png";
+  } else if (dealt[4] == 7) {
+    document.getElementById("card5").src = "images/7.png";
+  } else if (dealt[4] == 8) {
+    document.getElementById("card5").src = "images/8.png";
+  } else if (dealt[4] == 9) {
+    document.getElementById("card5").src = "images/9.png";
+  } else if (dealt[4] == 10) {
+    document.getElementById("card5").src = "images/10.png";
+  } else if (dealt[4] == 11) {
+    document.getElementById("card5").src = "images/ace.png";
+  }
+  if (dealt[5] == 1) {
+    document.getElementById("card6").src = "images/ace.png";
+  } else if (dealt[5] == 2) {
+    document.getElementById("card6").src = "images/2.png";
+  } else if (dealt[5] == 3) {
+    document.getElementById("card6").src = "images/3.png";
+  } else if (dealt[5] == 4) {
+    document.getElementById("card6").src = "images/4.png";
+  } else if (dealt[5] == 5) {
+    document.getElementById("card6").src = "images/5.png";
+  } else if (dealt[5] == 6) {
+    document.getElementById("card6").src = "images/6.png";
+  } else if (dealt[5] == 7) {
+    document.getElementById("card6").src = "images/7.png";
+  } else if (dealt[5] == 8) {
+    document.getElementById("card6").src = "images/8.png";
+  } else if (dealt[5] == 9) {
+    document.getElementById("card6").src = "images/9.png";
+  } else if (dealt[5] == 10) {
+    document.getElementById("card6").src = "images/10.png";
+  } else if (dealt[5] == 11) {
+    document.getElementById("card6").src = "images/ace.png";
+  }
   ranCard2 = "";
   document.getElementById("yourCards").innerHTML = dealt;
   const reducer = (previousValue, currentValue) => previousValue + currentValue;
@@ -114,8 +264,14 @@ function reset() {
   document.getElementById("yourCards").innerHTML = "";
   document.getElementById("totals").innerHTML = "";
   document.getElementById("dealBtn").onclick = deal;
-  document.getElementById("hitBtn").onclick = hit;
-  document.getElementById("stayBtn").onclick = stay;
+  document.getElementById("hitBtn").onclick = "";
+  document.getElementById("stayBtn").onclick = "";
+  document.getElementById("card1").src = "";
+  document.getElementById("card2").src = "";
+  document.getElementById("card3").src = "";
+  document.getElementById("card4").src = "";
+  document.getElementById("card5").src = "";
+  document.getElementById("card6").src = "";
   dealerCard1 = "";
   dealerCard2 = "";
   dealerCard3 = "";

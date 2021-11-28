@@ -2,8 +2,71 @@ body {
   text-align: center;
   background-color: green;
 }
-#gameBoard {
+
+h1 {
+  font-size: 10vh;
   background-color: red;
-  margin: 15%;
-  padding: 7% 0%;
+  padding: 3% 5%;
+  margin: 3% 5%;
+  border-radius: 5px;
 }
+
+#gameBoard {
+  background-color: dimgrey;
+  padding: 7% 0%;
+
+}
+
+#cardShown {
+  background-color:darkgreen;
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 3%;
+  margin-left: 7%;
+  margin-right: 7%;
+  border: 2px solid brown;
+  border-radius: 35px;
+}
+
+#card1 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+#card2 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+#card3 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+#card4 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+#card5 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+#card6 {
+  width: 50%;
+  margin-top: 10%;
+}
+
+button {
+  background-color: red;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
