@@ -5,4 +5,6 @@ After inputing a bet, card 1 is dealt after which the player can hit and continu
 that are placed down show as images and are autototaled for the player. After a round, a win or lose is recorded and the player either doubles or 
 loses the bet. 
 
-This branch is the commited branch after trial features tested.
+Version 2.0
+includes bug fixes
+includes graphical update to show card images
